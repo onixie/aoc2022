@@ -61,7 +61,7 @@ executable aoc2022
     main-is:          Main.hs
 
     -- Modules included in this executable, other than Main.
-    -- other-modules:
+    other-modules:    Day1
 
     -- LANGUAGE extensions used by modules in this package.
     -- other-extensions:
@@ -72,7 +72,8 @@ executable aoc2022
                       mtl
 
     -- Directories containing source files.
-    hs-source-dirs:   app
+    hs-source-dirs:   main,
+                      day1
 
     -- Base language which the package is written in.
     default-language: GHC2021
