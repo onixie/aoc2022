@@ -61,10 +61,11 @@ executable aoc2022
     main-is:          Main.hs
 
     -- Modules included in this executable, other than Main.
-    other-modules:    Day1
+    other-modules:    Day1,
+                      Day2
 
     -- LANGUAGE extensions used by modules in this package.
-    -- other-extensions:
+    other-extensions: OverloadedStrings
 
     -- Other library packages from which modules are imported.
     build-depends:    base ^>=4.16.3.0,
@@ -75,7 +76,8 @@ executable aoc2022
 
     -- Directories containing source files.
     hs-source-dirs:   main,
-                      day1
+                      day1,
+                      day2
 
     -- Base language which the package is written in.
     default-language: GHC2021
