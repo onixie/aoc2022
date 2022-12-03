@@ -4,4 +4,5 @@ import qualified Day1
 
 main :: IO ()
 main = do
-  Day1.result
+  Day1.part1
+  Day1.part2
