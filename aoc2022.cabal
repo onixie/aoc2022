@@ -62,7 +62,9 @@ executable aoc2022
 
     -- Modules included in this executable, other than Main.
     other-modules:    Day1,
-                      Day2
+                      Day2,
+                      Day3
+
 
     -- LANGUAGE extensions used by modules in this package.
     other-extensions: OverloadedStrings
@@ -71,13 +73,17 @@ executable aoc2022
     build-depends:    base ^>=4.16.3.0,
                       text,
                       megaparsec,
-                      mtl
+                      mtl,
+                      extra,
+                      containers
 
 
     -- Directories containing source files.
     hs-source-dirs:   main,
                       day1,
-                      day2
+                      day2,
+                      day3
+
 
     -- Base language which the package is written in.
     default-language: GHC2021
