@@ -13,3 +13,4 @@ main = do
   Day2.part2
 
   Day3.part1
+  Day3.part2
