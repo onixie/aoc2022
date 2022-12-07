@@ -65,7 +65,8 @@ executable aoc2022
                       Day2,
                       Day3,
                       Day4,
-                      Day5
+                      Day5,
+                      Day6
 
 
     -- LANGUAGE extensions used by modules in this package.
@@ -77,8 +78,8 @@ executable aoc2022
                       megaparsec,
                       mtl,
                       extra,
-                      containers
-
+                      containers,
+                      Unique
 
     -- Directories containing source files.
     hs-source-dirs:   main,
@@ -86,7 +87,8 @@ executable aoc2022
                       day2,
                       day3,
                       day4,
-                      day5
+                      day5,
+                      day6
 
     -- Base language which the package is written in.
     default-language: GHC2021
