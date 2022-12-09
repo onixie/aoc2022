@@ -51,7 +51,7 @@ extra-doc-files:    CHANGELOG.md
 -- extra-source-files:
 
 common warnings
-    ghc-options: -Wall
+    ghc-options: -Wall -Wno-incomplete-uni-patterns
 
 executable aoc2022
     -- Import common warning flags.
@@ -66,8 +66,8 @@ executable aoc2022
                       Day3,
                       Day4,
                       Day5,
-                      Day6
-
+                      Day6,
+                      Day7
 
     -- LANGUAGE extensions used by modules in this package.
     other-extensions: OverloadedStrings
@@ -79,7 +79,10 @@ executable aoc2022
                       mtl,
                       extra,
                       containers,
-                      Unique
+                      Unique,
+                      optics,
+                      generic-optics
+
 
     -- Directories containing source files.
     hs-source-dirs:   main,
@@ -88,7 +91,8 @@ executable aoc2022
                       day3,
                       day4,
                       day5,
-                      day6
+                      day6,
+                      day7
 
     -- Base language which the package is written in.
     default-language: GHC2021

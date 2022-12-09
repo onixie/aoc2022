@@ -6,6 +6,7 @@ import qualified Day3
 import qualified Day4
 import qualified Day5
 import qualified Day6
+import qualified Day7
 
 main :: IO ()
 main = do
@@ -26,3 +27,6 @@ main = do
 
   Day6.part1
   Day6.part2
+
+  Day7.part1
+  Day7.part2
