@@ -61,7 +61,7 @@ translate = translate' 1
 
 part1 :: IO ()
 part1 = do
-  program <- load "day10/input_test.txt"
+  program <- load "day10/input.txt"
   -- print program
   -- print $ translate program empty
   let cycles = fromList [20,60..220]
