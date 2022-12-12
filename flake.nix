@@ -25,6 +25,7 @@
         packages.${packageName} =
           haskellPackages.callCabal2nix packageName self rec {
             # Dependency overrides go here
+            Unique = jailbreakUnbreak haskellPackages.Unique;
           };
 
         defaultPackage = self.packages.${system}.${packageName};
