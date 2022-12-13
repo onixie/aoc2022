@@ -15,26 +15,28 @@
       let
         pkgs = nixpkgs.legacyPackages.${system};
 
-        haskellPackages = pkgs.haskell.packages.ghc92;
+        haskellpackages = pkgs.haskell.packages.ghc92;
 
-        jailbreakUnbreak = pkg:
-          pkgs.haskell.lib.doJailbreak (pkg.overrideAttrs (_: { meta = { }; }));
+        jailbreakunbreak = pkg:
+          pkgs.haskell.lib.dojailbreak (pkg.overrideattrs (_: { meta = { }; }));
 
-        packageName = "aoc2022";
+        packagename = "aoc2022";
       in {
-        packages.${packageName} =
-          haskellPackages.callCabal2nix packageName self rec {
-            # Dependency overrides go here
-            Unique = jailbreakUnbreak haskellPackages.Unique;
+        packages.${packagename} =
+          haskellpackages.callcabal2nix packagename self rec {
+            # dependency overrides go here
+            unique = jailbreakunbreak haskellpackages.unique;
           };
 
-        defaultPackage = self.packages.${system}.${packageName};
+        defaultpackage = self.packages.${system}.${packagename};
 
-        devShell = pkgs.mkShell {
-          buildInputs = with pkgs; [
-            haskellPackages.haskell-language-server
+        devshell = pkgs.mkshell {
+          buildinputs = with pkgs; [
+            haskellpackages.haskell-language-server
             ghcid
             cabal-install
+            haskellpackages.hp2pretty
+            haskellpackages.ghcprofview
           ];
           inputsFrom = builtins.attrValues self.packages.${system};
         };
