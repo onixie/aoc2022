@@ -3,3 +3,7 @@ result
 *.hi
 *.ho
 *.o
+*.hp
+*.prof
+aoc2022.svg
+cabal.project.local
