@@ -71,7 +71,8 @@ executable aoc2022
                       Day8,
                       Day9,
                       Day10,
-                      Day11
+                      Day11,
+                      Day12
 
     -- LANGUAGE extensions used by modules in this package.
     other-extensions: OverloadedStrings
@@ -86,7 +87,9 @@ executable aoc2022
                       Unique,
                       optics,
                       generic-optics,
-                      array
+                      array,
+                      ordered-containers,
+                      gloss
 
     -- Directories containing source files.
     hs-source-dirs:   main,
@@ -100,7 +103,8 @@ executable aoc2022
                       day8,
                       day9,
                       day10,
-                      day11
+                      day11,
+                      day12
 
     -- Base language which the package is written in.
     default-language: GHC2021
