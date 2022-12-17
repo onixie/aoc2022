@@ -5,5 +5,7 @@ result
 *.o
 *.hp
 *.prof
-aoc2022.svg
+*.svg
 cabal.project.local
+*~
+a.out
