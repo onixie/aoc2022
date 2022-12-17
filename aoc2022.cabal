@@ -72,7 +72,8 @@ executable aoc2022
                       Day9,
                       Day10,
                       Day11,
-                      Day12
+                      Day12,
+                      Day13
 
     -- LANGUAGE extensions used by modules in this package.
     other-extensions: OverloadedStrings
@@ -104,7 +105,8 @@ executable aoc2022
                       day9,
                       day10,
                       day11,
-                      day12
+                      day12,
+                      day13
 
     -- Base language which the package is written in.
     default-language: GHC2021
