@@ -15,6 +15,8 @@ module Main where
 -- import qualified Day13
 import qualified Day14
 
+import Graphics.Gloss
+
 main :: IO ()
 main = do
   -- Day1.part1
@@ -56,5 +58,5 @@ main = do
   -- Day13.part1
   -- Day13.part2
 
-  Day14.part1
+  -- Day14.part1
   Day14.part2

@@ -51,7 +51,7 @@ extra-doc-files:    CHANGELOG.md
 -- extra-source-files:
 
 common warnings
-    ghc-options: -Wall -Wno-incomplete-uni-patterns
+    ghc-options: -Wall -Wno-incomplete-uni-patterns -Wno-unused-imports
 
 executable aoc2022
     -- Import common warning flags.

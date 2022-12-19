@@ -15,7 +15,10 @@
       let
         pkgs = nixpkgs.legacyPackages.${system};
 
-        haskellPackages = pkgs.haskell.packages.ghc92;
+        haskellPackages = pkgs.haskell.packages.ghc92.extend (hself: hsuper: rec{
+          gloss-rendering = pkgs.haskell.lib.doJailbreak hsuper.gloss-rendering;
+        }
+        );
 
         jailbreakUnbreak = pkg:
           pkgs.haskell.lib.doJailbreak (pkg.overrideAttrs (_: { meta = { }; }));
@@ -26,7 +29,7 @@
           haskellPackages.callCabal2nix packageName self rec {
             # Dependency overrides go here
             Unique = jailbreakUnbreak haskellPackages.Unique;
-            gloss = jailbreakUnbreak haskellPackages.gloss-rendering;
+            gloss  = jailbreakUnbreak haskellPackages.gloss;
           };
 
         defaultPackage = self.packages.${system}.${packageName};
@@ -40,6 +43,15 @@
             haskellPackages.ghcprofview
             libGL
             libGLU
+            freeglut
+            mesa
+            glfw
+            xorg.libX11
+            xorg.libXinerama
+            xorg.libXcursor
+            xorg.libXi
+            xorg.libXrandr
+            xorg.libXxf86vm
           ];
           inputsFrom = builtins.attrValues self.packages.${system};
         };
