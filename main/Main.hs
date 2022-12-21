@@ -13,7 +13,8 @@ module Main where
 -- import qualified Day11
 -- import qualified Day12
 -- import qualified Day13
-import qualified Day14
+-- import qualified Day14
+import qualified Day15
 
 import Graphics.Gloss
 
@@ -59,4 +60,7 @@ main = do
   -- Day13.part2
 
   -- Day14.part1
-  Day14.part2
+  -- Day14.part2
+
+  Day15.part1
+  Day15.part2
